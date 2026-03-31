@@ -11,18 +11,18 @@ __pycache__/
 *.bin
 *.h5
 *.keras
-checkpoints/
+# checkpoints/
 
 # Data
-data/
-*.csv
+# data/
+# *.csv
 *.tsv
 *.npy
 *.npz
 
 # Logs and outputs
 logs/
-submissions/
+# submissions/
 *.log
 
 # Jupyter Notebooks
