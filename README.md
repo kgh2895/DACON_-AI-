@@ -98,6 +98,25 @@ ConvNeXt-Large     ConvNeXt-Large    (weight sharing)
 
 ## Reproduction
 
+### Data
+
+이미지 데이터는 DACON 대회 페이지에서 다운로드할 수 있습니다.
+
+**[DACON 구조물 안정성 물리 추론 AI 경진대회](https://dacon.io/competitions/official/236686)**
+
+다운로드 후 아래와 같이 배치:
+```
+data/
+├── train/                 # 학습 이미지 (1,000 samples)
+├── dev/                   # 개발 이미지 (100 samples)
+├── test/                  # 평가 이미지 (1,000 samples)
+├── train.csv
+├── dev.csv
+└── sample_submission.csv
+```
+
+> `soft_labels.json`과 `video_features.json`은 레포에 포함되어 있습니다.
+
 ### Checkpoints
 
 학습된 모델 가중치는 Google Drive에서 다운로드할 수 있습니다.
