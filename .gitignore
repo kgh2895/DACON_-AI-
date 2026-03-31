@@ -1,0 +1,44 @@
+# Python and machine learning ignored files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Models and checkpoints
+*.pth
+*.pt
+*.cpk
+*.safetensors
+*.bin
+*.h5
+*.keras
+checkpoints/
+
+# Data
+data/
+*.csv
+*.tsv
+*.npy
+*.npz
+
+# Logs and outputs
+logs/
+submissions/
+*.log
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
