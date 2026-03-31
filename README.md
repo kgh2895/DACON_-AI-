@@ -98,6 +98,23 @@ ConvNeXt-Large     ConvNeXt-Large    (weight sharing)
 
 ## Reproduction
 
+### Checkpoints
+
+학습된 모델 가중치는 Google Drive에서 다운로드할 수 있습니다.
+
+**[Download Checkpoints (Google Drive)](https://drive.google.com/drive/folders/1W0OSAbDGW9OLo1iPiIDkBX0fCjuxBJrv?usp=drive_link)**
+
+다운로드 후 아래와 같이 배치:
+```
+checkpoints/
+├── 20260319_2248/    # v12 (SEED=47)
+│   ├── fold1_phase2.pth ~ fold5_phase2.pth
+│   ├── oof_labels.npy
+│   └── oof_preds.npy
+└── 20260325_2212/    # v14 (SEED=49)
+    └── fold1_phase2.pth ~ fold5_phase2.pth
+```
+
 ### Score Reproduction (from checkpoints)
 
 ```bash
@@ -144,13 +161,13 @@ HF_HUB_OFFLINE=1 python -u train.py --no-warmup --no-focal
 ├── train_video_teacher.py     # Video teacher for soft labels
 ├── utils.py                   # Utilities
 ├── requirements.txt
-├── data/
-│   ├── train/, dev/, test/    # Image data (1,000 / 100 / 1,000)
-│   ├── train.csv, dev.csv, sample_submission.csv
-│   ├── video_features.json    # Pre-extracted video features
-│   └── soft_labels.json       # Video teacher soft labels
-├── checkpoints/               # Trained model weights
-└── submissions/               # Output CSV files
+├── soft_labels.json           # Video teacher soft labels
+├── video_features.json        # Pre-extracted video features
+├── checkpoints/               # Trained model weights (Google Drive)
+└── data/                      # Image data & CSV (not included)
+    ├── train/, dev/, test/
+    ├── train.csv, dev.csv
+    └── sample_submission.csv
 ```
 
 ## Environment
